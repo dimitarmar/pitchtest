@@ -17,13 +17,6 @@ export class HomeComponent implements OnInit {
     constructor(private pitchService: PitchService) { }
 
     ngOnInit() {
-        this.isLoading = true;
-        this.pitchService.getPitchesList(1, 50)
-            .then( (res: any) => {
-                this.isLoading = false;
-                this.pitchesList = res.data;
-                this.numberItems = res.meta.total_items;
-            });
     }
 
     loadLazy(e: any) {
